@@ -54,7 +54,7 @@ class about2(TemplateView):
 class DefineLoginView(LoginView):
     template_name = 'login2.html'
 
-    # def form_valid(self, form):
-    #     user = form.get_user()
-    #     return render(self.request, 'success.html', {'username': user})
+    def form_valid(self, form):
+        user = form.get_user()
+        return render(self.request, 'success.html', {'username': user})
 
