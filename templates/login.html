@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{#    <form action="" method="post">#}
+{#        {% csrf_token %}#}
+{#        {{ form.as_p }}#}
+{#        {{ error }}#}
+{#        <input type="submit" value="登录">#}
+{##}
+{#    </form>#}
+
+
+<form action="/login/" method="post">
+    <label>------Login------</label><br />
+    <label for="id">用户名&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" name="username"><br />
+    <label for="id">密码</label>
+    <input type="text" name="password"><br />
+    <input type="submit">{% csrf_token %}
+    <br />
+    {{ error }}
+</form>
+
+
+
+</body>
+</html>
